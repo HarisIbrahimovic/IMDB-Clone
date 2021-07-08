@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.homeFragment">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+>    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+    <EditText
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/edittextdesign"
+        android:fontFamily="@font/didact_gothic"
+        android:hint="Search"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:layout_gravity="center"
+        android:drawableEnd="@drawable/search"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp">
+
+
+    </EditText>
+
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="200dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/ic_launcher"
+                android:layout_marginBottom="30dp"
+                android:id="@+id/posterPic"
+                android:background="@drawable/imagedes"
+                />
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="bottom|center"
+                android:backgroundTint="@color/white"
+                app:borderWidth="0dp"
+                android:src="@drawable/play"
+                app:fabCustomSize="50dp"
+                android:id="@+id/openTrailer"
+                />
+
+
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Popular"
+            android:textSize="25sp"
+            android:fontFamily="@font/didact_gothic"
+            android:layout_marginTop="-5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="15dp"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="235dp"
+
+        android:id="@+id/recViewPopularMovies"
+        android:orientation="horizontal"
+        />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Now Playing"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/didact_gothic"
+            android:textSize="25sp"
+            android:layout_marginLeft="15dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="235dp"
+
+            android:orientation="horizontal"
+            android:id="@+id/recyclerViewNowPlaying"
+            />
+
+
+
+    </LinearLayout>
+</ScrollView>
+
+</FrameLayout>

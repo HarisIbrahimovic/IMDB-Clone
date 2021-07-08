@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+        <variable
+            name="credit"
+            type="com.example.imdbclone.model.ActorCredits.Cast" />
+    </data>
+
+    <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="127dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_marginLeft="15dp"
+            android:layout_width="110dp"
+            android:layout_height="210dp"
+            android:id="@+id/smallMoviePicutre"
+            detailedMovieImage="@{credit.posterPath}"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="8,5"
+            app:ratingScore="@{credit.voteAverage}"
+            android:textSize="15sp"
+            android:textColor="#BD6868"
+            android:background="@drawable/newbutton_des"
+            android:layout_marginTop="-40dp"
+            android:layout_marginLeft="15dp"
+            android:textStyle="bold"
+            android:clickable="false"
+            android:gravity="center"
+            android:id="@+id/scoreButtonSmall"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{credit.character}"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:fontFamily="@font/didact_gothic"
+            android:layout_marginLeft="7dp"
+            android:layout_gravity="center"
+            />
+
+
+
+</LinearLayout>
+</layout>
+

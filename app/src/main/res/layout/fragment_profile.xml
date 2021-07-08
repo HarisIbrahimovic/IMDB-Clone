@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.profileFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_marginTop="30dp"
+                android:layout_width="235dp"
+                android:layout_height="350dp"
+                android:layout_gravity="center"
+                android:id="@+id/userImage"
+
+            />
+
+
+
+        <TextView
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:text="userName"
+            android:gravity="center"
+            android:padding="5dp"
+            android:elevation="2dp"
+            android:layout_marginTop="-12dp"
+            android:id="@+id/userName"
+            android:background="@drawable/actor_name_des"
+            android:layout_gravity="center"
+            android:textSize="25sp"
+            android:fontFamily="@font/didact_gothic"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:fontFamily="@font/didact_gothic"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="7dp"
+                android:elevation="5dp"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/txtviewsleft_des"
+                android:text="Favorites"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="215dp"
+                android:id="@+id/watchListRecView"
+                android:elevation="10dp"
+                android:orientation="horizontal"
+                />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:orientation="horizontal"
+
+                android:layout_marginTop="5dp"
+                android:id="@+id/favActorsRec"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:fontFamily="@font/didact_gothic"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="7dp"
+                android:background="@drawable/recent_comments_des"
+                android:elevation="5dp"
+                android:text="Recent comments"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical"
+                android:id="@+id/userRatingRec"
+                />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+    </FrameLayout>
+
+

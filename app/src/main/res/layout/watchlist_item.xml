@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="movie"
+            type="com.example.imdbclone.model.MovieWatchlist" />
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginRight="2dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+        <ImageView
+            android:layout_marginLeft="15dp"
+            android:layout_width="110dp"
+            android:layout_height="210dp"
+            app:detailedMovieImage="@{movie.posterPath}"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:ratingScoreS="@{String.valueOf(movie.rating)}"
+            android:textSize="15sp"
+            android:textColor="#BD6868"
+            android:background="@drawable/newbutton_des"
+            android:layout_marginTop="-40dp"
+            android:layout_marginLeft="15dp"
+            android:textStyle="bold"
+            android:clickable="false"
+            android:gravity="center"
+            />
+    </LinearLayout>
+</layout>

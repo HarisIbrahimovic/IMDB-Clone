@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="actor"
+            type="com.example.imdbclone.model.Actors.Cast" />
+     </data>
+    <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="130dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_marginTop="5dp"
+        android:layout_width="110dp"
+        android:layout_height="180dp"
+        android:id="@+id/actorImage"
+        android:layout_marginLeft="15dp"
+        app:actorImage="@{actor.profilePath}"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{actor.name}"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:id="@+id/ActorName"
+        android:fontFamily="@font/didact_gothic"
+        android:layout_marginLeft="3dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{actor.character}"
+        android:fontFamily="@font/didact_gothic"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="5dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:id="@+id/ActorRole"
+        android:textSize="10sp"
+
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="10dp"
+        />
+
+</LinearLayout>
+
+</layout>
+

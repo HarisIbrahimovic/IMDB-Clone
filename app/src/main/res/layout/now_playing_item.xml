@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+    <data>
+        <variable
+            name="movie"
+            type="com.example.imdbclone.model.MovieResults.Result" />
+
+        <variable
+            name="browser"
+            type="com.example.imdbclone.utils.BrowserAdapter" />
+    </data>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginRight="2dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+        android:layout_marginLeft="15dp"
+        android:layout_width="110dp"
+        android:layout_height="210dp"
+        android:id="@+id/smallMoviePicutre"
+        app:actorImage="@{movie.posterPath}"
+        />
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="Buy tickets"
+        android:src="@drawable/bookmark"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:id="@+id/getTickets"
+        android:background="@drawable/buytickets"
+        android:layout_marginTop="-35dp"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:clickable="false"
+        android:gravity="center"
+        />
+
+</LinearLayout>
+</layout>

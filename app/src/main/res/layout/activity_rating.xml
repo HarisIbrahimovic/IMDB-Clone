@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffc5cd"
+    tools:context=".Views.RatingActivity">
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:elevation="5dp"
+        android:background="@drawable/namedesign"
+        >
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:numStars="5"
+        android:id="@+id/ratingBarRating"
+        android:stepSize="0.5"
+        android:secondaryProgressTint="#454545"
+        android:progressTint="#454545"
+        android:progressBackgroundTint="#DFDEDE"
+        android:layout_marginTop="25dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/edittextdesign"
+        android:hint="Leave a comment"
+        android:id="@+id/commentText"
+        android:paddingLeft="20dp"
+        android:inputType="text"
+        android:imeOptions="actionDone"
+        android:fontFamily="@font/didact_gothic"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comments"
+        android:textSize="25sp"
+        android:fontFamily="@font/didact_gothic"
+        android:layout_marginLeft="20dp"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingsRecView"
+        />
+    </LinearLayout>
+
+
+</LinearLayout>

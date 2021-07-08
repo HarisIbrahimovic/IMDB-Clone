@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.settingsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        tools:context=".Views.MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:layout_marginLeft="25dp"
+                android:id="@+id/upperText"
+                android:textSize="35sp"
+                android:textColor="#4C4B4B"
+                android:fontFamily="@font/didact_gothic"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Configure account."
+            android:layout_marginLeft="27dp"
+            android:layout_gravity="bottom"
+            android:id="@+id/lowerText"
+            android:fontFamily="@font/didact_gothic"
+            />
+
+        <EditText
+            android:id="@+id/settingsName"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:imeOptions="actionDone"
+            android:background="@drawable/edittextdesign"
+            android:fontFamily="@font/didact_gothic"
+            android:hint="UserName"
+            android:inputType="textEmailAddress"
+            android:padding="20dp" />
+
+        <EditText
+            android:id="@+id/settingEmail"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/edittextdesign"
+            android:fontFamily="@font/didact_gothic"
+            android:hint="Email adress"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:padding="20dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Password"
+            android:padding="20dp"
+            android:background="@drawable/edittextdesign"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/settingPassword"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:fontFamily="@font/didact_gothic"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/uploadButton"
+            android:layout_width="200dp"
+            android:inputType="text"
+            android:imeOptions="actionDone"
+            android:layout_height="55dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/buttondesing"
+            android:fontFamily="sans-serif-medium"
+            android:text="Upload Picutre"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:text="Sign out"
+            android:id="@+id/signoutText"
+            android:fontFamily="@font/didact_gothic"
+            />
+
+    </LinearLayout>
+
+</FrameLayout>
