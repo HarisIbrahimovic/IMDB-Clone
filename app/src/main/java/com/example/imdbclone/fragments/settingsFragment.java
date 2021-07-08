@@ -54,10 +54,18 @@ public class settingsFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_settings, container, false);
+        checkUser();
         setUpStuff(view);
         observe();
         onClicks();
         return view; }
+
+    private void checkUser() {
+        if(FirebaseAuth.getInstance().getCurrentUser()==null){
+            startActivity(new Intent(getActivity().getApplicationContext(),MainActivity.class));
+            getActivity().finish();
+        }
+    }
 
     private void observe() {
         viewModel.getcUser().observe(this, new Observer<User>() {
